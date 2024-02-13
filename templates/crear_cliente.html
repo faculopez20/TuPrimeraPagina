@@ -6,6 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Se creo el usuario {{usuario}} correctamente</h1>
+    <h1>Crear usuario</h1>
+    <form action={%url "crear_cliente" %} method= "POST">
+        {% csrf_token %}
+    {% comment "" %}<p>
+        Nombre
+        <input type="text" name=nombre>
+    </p> 
+     <p>
+        Apellido
+        <input type="text" name=apellido>
+     </p>
+     <p> 
+        Edad
+        <input type="number"name=edad>
+     </p>
+        <input type="submit" value="Crear">
+{% endcomment %}
+<table>
+    {{formulario}}
+</table>
+    </form>
 </body>
 </html>
